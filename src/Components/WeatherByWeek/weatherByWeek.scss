@@ -1,0 +1,64 @@
+@import "../../styles/variable.scss";
+@import "../../styles/mixin.scss";
+.weather-week {
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -6px;
+    .weather-week-item {
+      width: 25%;
+      box-sizing: border-box;
+      padding: 0 6px;
+      margin-bottom: 16px;
+      .bg-day {
+        background-color: #0dcaf0 !important;
+        transition: 0.5s;
+      }
+      .weather-week-content {
+        padding: 8px;
+        height: 140px;
+        border-radius: 8px;
+        background-color: white;
+        .title {
+          font-size: 16px;
+          margin-bottom: 16px;
+          color: rgb(0 0 0/26%);
+        }
+        .inner-content {
+          text-align: center;
+          p {
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: $second-color;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .day-week {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: white;
+    p {
+      color: $second-color;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    &-inner {
+      display: flex;
+      .left {
+        width: 50%;
+        p {
+          font-size: 16px;
+        }
+      }
+      .right {
+        width: 50%;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

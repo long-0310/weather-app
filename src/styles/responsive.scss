@@ -1,0 +1,56 @@
+@media all and (max-width: 1200px) {
+  .weather-day {
+    &-inner {
+      .weather-day-item {
+        @include cols(50%);
+      }
+    }
+  }
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 768px) {
+  #root {
+    height: auto !important;
+  }
+  .side-bar {
+    width: 100%;
+    padding-bottom: 16px;
+    height: auto;
+  }
+  .weather {
+    width: 100%;
+    height: auto;
+  }
+  .weather-day {
+    &-inner {
+      .weather-day-item {
+        @include cols(100%);
+      }
+    }
+  }
+  .weather-week {
+    &-inner {
+      .weather-week-item {
+        width: 50%;
+      }
+    }
+  }
+}
+@media all and (max-width: 576px) {
+  .weather-week {
+    .day-week {
+      &-inner {
+        flex-wrap: wrap;
+        .left {
+          width: 100%;
+        }
+        .right {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 379px) {
+}

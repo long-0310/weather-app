@@ -1,0 +1,31 @@
+.weather {
+  width: 75%;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: rgb(246, 246, 248);
+  overflow: auto;
+  height: 90vh;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    ul {
+      display: flex;
+      li {
+        margin: auto 0;
+        a {
+          color: #6c757d;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 30px;
+          margin-right: 20px;
+        }
+      }
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+}

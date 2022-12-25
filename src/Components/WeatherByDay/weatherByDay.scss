@@ -1,0 +1,51 @@
+@import "../../styles/variable.scss";
+@import "../../styles/mixin.scss";
+
+.weather-day {
+  &-inner {
+    .weather-day-item {
+      @include cols(33.333%);
+      margin-bottom: 16px;
+      .weather-day-content {
+        padding: 8px;
+        height: 170px;
+        border-radius: 8px;
+
+        background-color: white;
+        .title {
+          margin-bottom: 16px;
+          font-size: 20px;
+          color: rgb(0 0 0/26%);
+        }
+        .inner-content {
+          text-align: center;
+          .text-icon {
+            font-size: 24px;
+            svg {
+              vertical-align: middle;
+            }
+          }
+          .icon {
+            width: 50px;
+            height: 50px;
+          }
+          .sun-icon {
+            color: #ffc107;
+          }
+          .wind-icon {
+            color: rgba(13, 110, 253, 0.7686274509803922);
+          }
+          p {
+            margin-bottom: 16px;
+            font-size: 28px;
+            color: $second-color;
+            font-weight: 500;
+          }
+        }
+        .two-icon {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

@@ -1,56 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+
+import HomePage from "./pages/homePage/homePage";
+import { Route, Routes } from "react-router-dom";
+import SideBar from "./Components/SideBar/sideBar";
+import WeatherByDay from "./Components/WeatherByDay/weatherByDay";
+import WeatherByWeek from "./Components/WeatherByWeek/weatherByWeek";
+import WeatherByHour from "./Components/WeatherByHour/weatherByHour";
+import { useDispatch } from "react-redux";
+import { getCity, getData } from "./features/watchGetData/weatherSlice";
+import "./styles/index.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Routes>
+        <Route path="/" element={<HomePage />}>
+          <Route path="/" element={<WeatherByDay />} />
+          <Route path="week" element={<WeatherByWeek />} />
+          <Route path="hour" element={<WeatherByHour />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

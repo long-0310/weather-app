@@ -1,0 +1,30 @@
+@mixin cols($number) {
+  width: $number;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin cols($number) {
+  width: $number;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+@mixin transform($scale) {
+  transform: $scale;
+  -webkit-transform: $scale;
+  -moz-transform: $scale;
+  -ms-transform: $scale;
+}
+@mixin transit($attr, $sec) {
+  transition: $attr, $sec;
+  -webkit-transition: $attr, $sec;
+  -moz-transition: $attr, $sec;
+  -ms-transition: $attr, $sec;
+}

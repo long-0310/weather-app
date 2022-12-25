@@ -1,0 +1,55 @@
+@import "../../styles/variable.scss";
+
+.side-bar {
+  width: 25%;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: white;
+  overflow: auto;
+  height: 90vh;
+  &-inner {
+    .search {
+      width: 100%;
+      height: 38px;
+      color: $primary-color;
+      padding: 6px 12px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+    }
+    h3 {
+      font-size: 32px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: 500;
+    }
+    h4 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    p {
+      color: $second-color;
+    }
+    .banner-side {
+      margin-top: 16px;
+      position: relative;
+      img {
+        border-radius: 4px;
+        width: 100%;
+      }
+      p {
+        top: 50%;
+        left: 50%;
+        font-size: 28px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        color: white;
+        position: absolute;
+        z-index: 999;
+      }
+    }
+  }
+}

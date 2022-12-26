@@ -28,14 +28,12 @@ function SideBar(props) {
     ? dataCity?.weather?.[0]?.main
     : "atmosphere";
 
-  const country = "Hanoi";
-
-  // console.log(dataCity.coord?.lat, dataCity.coord?.lon);
-
   function handleFindCity(e) {
     e.preventDefault();
     setSearch(e.target.value);
   }
+
+  const country = "Hanoi";
 
   const onSubmit = (e) => {
     e.preventDefault();
